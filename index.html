@@ -1,10 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>www.tristan.ooo</title>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <style>
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            width: 700px;
+        }
+
+        #site-header {
+            font-family: 'Poiret One', cursive;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            font-style: italic;
+
+        }
+
+        .post-title {
+            margin-bottom: 0px;
+            color: #2288bb;
+            font: normal normal 1.8em 'Trebuchet MS', Trebuchet, Verdana, sans-serif
+
+        }
+
+        article {
+            font-family: 'Trebuchet MS', Trebuchet, Verdana, sans-serif;
+            margin: 20px 20px 60px 20px;
+        }
+
+        .post-date {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 0.9em;
+            color: #777777;
+        }
+
+
+    </style>
 </head>
 <body>
-<p>Test 123. You smell like tea, you fool.</p>
+<div class="container">
+    <header id="site-header">
+        <h1>My Online Nook</h1>
+        <h2>I'm writing as a thinking aid, but you're welcome to read. Excuse the lack of polish.</h2>
+    </header>
+    <article class="post">
+        <header class="post-header">
+            <h3 class="post-title">Productive learning holidays</h3>
+            <span class="post-date">18 May 2016</span>
+        </header>
+        <p>I resigned. Told my boss to choose a date that would cause minimal disruption, and a few months later I
+            was happily and intentionally unemployed. For the past 3 months I have been on a "learning holiday" to
+            become a better programmer. Here's what I found made my time productive...</p>
+
+        <h4>1) Have distinct modes: Planning, "Working" or Resting. Never mix.</h4>
+        <p>
+            Allocate some time to be in a particular mode and then focus. If you alt-tab from an IDE to Facebook, you're
+            doing it wrong. Likewise, it's helpful to not be planning your work while also doing your work. Not only is
+            it distracting, it can be discouraging because you'll second guess what you're working on.
+        </p>
+
+        <h4>2) Structured and unstructured planning</h4>
+        <p>It's important to set and adjust goals. Do this by setting aside time to be in "structured" or "unstructured"
+            planning mode.</p>
+        <p>Structured planning is more goal focused. Should be done on paper. Write up the resulting plans somewhere you
+            can see them every day, such as a whiteboard, window or mirror.</p>
+        <p>Unstructured planning is more akin to brainstorming. Long walks are a good way to get thoughts pumping while
+            looking after the body.</p>
+
+        <h4>3) Don't look at job ads</h4>
+        <p>Allocate a number of months to not even consider employment, or it will consume too much headspace.</p>
+
+        <h4>4) Don't just read</h4>
+        <p>After reading something, explain it to yourself. This'll ensure you understand it, and will help you
+            remember.</p>
+        <p>Although not appropriate for everything, I'm a huge fan of Anki. Basically it's software that lets do
+            staggered
+            self-testing with flash cards. It's efficient because it won't bug you with cards that you've recently got
+            correct. Usually I write cards at home, and test myself on the train. An alternative app is SuperMemo.</p>
+        <p>Supposedly there are studies that show people have strong biases against self-testing while studying, but
+            that
+            testing nevertheless greatly improves retention of both new and old knowledge. Citation needed.</p>
+    </article>
+
+    <article class="post">
+        <header class="post-header">
+            <h3 class="post-title">WebRTC P2P CDN concerns</h3>
+            <span class="post-date">20 April 2016</span>
+        </header>
+        <p>Using WebRTC to create P2P CDNs is an amazing idea that I believe has lots of potential. They push bandwidth
+            costs on to the user, which could help poorly funded websites reach large audience. Nevertheless, here are
+            two issues that I suspect will arise...</p>
+
+        <h4>Surprise phone bills</h4>
+        <p>There's no limit to how much your browser could upload. Website owners could even surreptitiously use traffic
+            on one site to provide bandwidth for another.</p>
+        <p>Example: Bob only reads fan-fiction on the train but receives a surprise phone bill for $1000. Meanwhile
+            Alice watches cat videos on the train and never has to wait for buffering.</p>
+
+        <h4>Privacy concerns</h4>
+        <p>It will be possible to see the IPs of anyone visiting a website that uses a P2P CDN. This could be really bad
+            if you happen to watch porn and live in Saudi Arabia, for example.</p>
+    </article>
+    <article class="post">
+        <header class="post-header">
+            <h3 class="post-title">Programming Books</h3>
+            <span class="post-date">15 April 2016</span>
+        </header>
+        <h4>YMMV / Humility Disclaimer:</h4>
+        <p>Here are some programming-related ranked and rated by how useful I felt they were to me personally. The most
+            important factor is usually how quickly I can obtain useful information from a book, rather than how much
+            knowledge a book contains in total or how suited they are to someone else. Epic tomes like Donald Knuth's
+            "The Art of Computer Programming" are awesome but not what I want.</p>
+
+        <h4>Effective Java&nbsp; - Joshua Bloch - 9</h4>
+        <p>To me, this book read like a thriller. For years I had been slowly developing my ideas about how to write
+            neat Java code, gleaning pearls of wisdom from wherever I could find them. If only I had known that most
+            those best practices were already gathered in this one book and explained in greater detail with
+            clarity.</p>
+        <p>The one downside is that it was last updated for Java 6. Everything in it is still relevant, but I would love
+            to know Joshua Bloch's thoughts on Java 8.</p>
+
+        <h4>Scalability Rules - M. Abbot, M. Fisher - 8</h4>
+        <p>Excellent book. The authors were very focused on helping you zero in on what's relevant to you and skip the
+            rest, and ensuring that all advice is concise and actionable. The book is structured around 50 general
+            principles for building scalable websites, and they have indexes to show which principles tend to be
+            relevant to which people (eg, software developers, project managers, etc). I ended up reading all of it, but
+            I often still refer back to sections.</p>
+        <p>Mostly the book has aged well, but HTTP/2 will make some of it obsolete.</p>
+
+        <h4>Java Concurrency in Practice - Brian Goetz - 8</h4>
+        <p>I've only read half so far, but I found this improved both my general understanding of concurrency with OO
+            design as well as Java specifics. Could be denser in parts.</p>
+        <p>Today I noticed the author has a <a href="https://stackoverflow.com/users/3553087/brian-goetz">Stack Overflow
+            account</a>! I should read his answers. </p>
+        <p>Edit: <a
+                href="https://stackoverflow.com/questions/10202768/is-java-concurrency-in-practice-still-valid/10214606#10214606">Brian
+            Goetz answering "Java Concurrency in Practice still valid?"</a>:</p>
+        <blockquote>While my perspective may be biased, my current intention for updating the book would be almost
+            strictly additive, covering fork-join, parallel decomposition, and the new parallel bulk data operations
+            coming in Java SE 8.
+        </blockquote>
+
+        <h4>The Soul of a New Machine - Tracy Kidder - 7.5</h4>
+        <p>This book is a non-fiction account of the development of a new computer in the 1970s, focusing on the
+            experiences of the engineers involved. Apart from being thoroughly enjoyable, I think this book is useful to
+            programmers because it explores many emotional issues a programmer must face. Building a system can easily
+            become addictive and all-consuming. It's hard to resist pouring your entire self into a project, so it's
+            worth considering what is gained and lost by doing so.</p>
+
+        <h4>Patterns of Enterprise Architecture 7</h4>
+        <p>A well structured book with lots of useful information. It's intended as reference and to provide an overview
+            of what patterns are widely used, rather than to promote any single approach. Nevertheless, Martin's
+            preferences (eg, Domain Models) are made very clear. I wish he wrote another book dedicated just to his way
+            of doing things.</p>
+
+        <h4>Founders at Work - Jessica Livingston - 7</h4>
+        <p>A wonderful book for easy reading on a train. It's interesting to see how varied the stories behind succesful
+            companies are, and how most of the founders were really fumbling their way through. The book also shows a
+            wonderful collection of different ways people think.</p>
+
+        <h4>Javascript Patterns - Stoyan Stefanov - 7</h4>
+        <p>Need to revisit this book.</p>
+
+        <h4>Javascript: The Good Parts - Douglas Crockford - 7</h4>
+        <p>I like the central idea behind the book: Javascript has hairy bits to avoid and strengths to embrace. I need
+            to revisit this book.</p>
+
+        <h4>Thinking in Systems - Donella Meadows - 6.5</h4>
+        <p>This book was an enjoyable read, but I haven't found myself applying its way of modeling systems anywhere.
+            Sadly the author passed away before finishing it, and despite being subsequently edited it still feels
+            incomplete.</p>
+
+        <h4>The Clean Coder - Robert Martin - 6.5</h4>
+        <p>The soft skills side of this book (eg, when and how to say "no") would have been more useful to me several
+            years ago. That's not to say I don't have room for improvement.</p>
+        <p>The book's confrontational tone, set by constantly asserting "<i>professionals use ___</i>", didn't gel with
+            me because I believe friendlier ways to foster improvement are more productive.</p>
+
+        <h4>Zen and the Art of Motorcycle Maintenance - Robert Pirsig - 6.5</h4>
+        <p>This book caught my attention because it was the only work of fiction on a list of top 100 books for
+            programmers. The book is a number of things: the author's philosophy, a story about riding motorbikes across
+            America, and the author's reflections on himself as a young man. I enjoyed it as a novel but the philosophy
+            became too metaphysical for me half way through so I stopped reading.</p>
+
+        <h4>Next Reads / Tsundoku</h4>
+        <ul>
+            <li>Refactoring to Patterns</li>
+            <li>The Computational Beauty of Nature</li>
+            <li>The Soul of a New Machine</li>
+            <li>Growing Object-Oriented Software, Guided by Tests</li>
+            <li>Thinking, Fast and Slow</li>
+            <li>A Very Short History of the World</li>
+        </ul>
+    </article>
+    <article class="post">
+        <header class="post-header">
+            <h3 class="post-title">Learning goals and how to choose them</h3>
+            <span class="post-date">14 April 2016</span>
+        </header>
+        <p>As with anything in life, time spent learning has an opportunity cost. So what should a programmer focus on?
+            "Follow your interests" isn't bad advice, but it's not helpful when everything is so damn interesting! Here
+            are two criteria I chose narrow things down:</p>
+        <ol>
+            <li>Learn skills with enduring usefulness.</li>
+            <li>Learn skills that broaden your capabilities, rather than alternative ways to do the same thing.</li>
+        </ol>
+        <p>With these in mind, I would like to focus on:</p>
+
+        <h4>1) Java & the JVM</h4>
+        <p>Everyone has their pet peeves about specifics of Java (e.g., the lack of optimised tail recursion) but it's
+            hard
+            to beat a language with such a massive community pumping out incredible libraries, tools, books, etc.</p>
+        <p>Rather than learning how to achieve the same outcomes using an additional language, I'd rather deepen my
+            understanding of Java and the JVM. Some experience with other languages can make you a stronger programmer,
+            but I can mostly stick to the JVM with
+            Scala, Kotlin, Clojure, and others.</p>
+
+        <h4>2) Web standards and browsers</h4>
+        <p>Frameworks come and go but web standards remain as building blocks. Understanding web standards broadens what
+            you're able to build and allows you to be on the cutting edge of what's possible. For example, this talented
+            guy
+            uses WebRTC to run BitTorrent in the browser: https://github.com/feross</p>
+        <p>There's also no getting around knowing Javascript, so you might as well embrace it.</p>
+
+        <h4>3) Design principles and computing fundamentals</h4>
+        <p>These tend not to be technology specific, or at least are related to technology that's deeply ingrained and
+            unlikely to change. The Lindy Effect is relevant here.</p>
+
+        <h4>4) Teamwork</h4>
+        <p>Working with humans is core to almost everything. Will their mushy wet-ware become obsolete anytime soon? I
+            don't think so, but if they do then all bets are off anyway.</p>
+    </article>
+
+</div>
 </body>
 </html>
