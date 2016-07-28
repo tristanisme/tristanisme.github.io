@@ -30,6 +30,10 @@
             font-style: italic;
         }
 
+        .code-block {
+
+        }
+
         .post-title {
             margin-bottom: 0px;
             color: #2288bb;
@@ -51,11 +55,77 @@
     </style>
 </head>
 <body>
+
+<!--
+True or False --- A Javascript Quiz!
+
+var Vehicle = function(){};
+var Truck = function(){};
+Truck.prototype = Object.create(Vehicle.prototype);
+var t = new Truck();
+
+console.log("1  " + (t instanceof Vehicle));
+console.log("2  " + (t instanceof Truck));
+console.log("3  " + (t.prototype instanceof Truck));
+console.log("4  " + (t.prototype === Truck.prototype));
+console.log("5  " + (t.prototype === Truck));
+console.log("6  " + (t.__proto__ === Truck));
+console.log("7  " + (t.__proto__ === Truck.prototype));
+console.log("8  " + (Truck.__proto__ === Vehicle.prototype));
+console.log("9  " + (Truck.__proto__.__proto__ === Object.prototype));
+console.log("10 " + (t.__proto__.__proto__ === Object.prototype));
+console.log("11 " + (t.__proto__.__proto__.__proto__ === Object.prototype));
+console.log("12 " + (Truck.__proto__ === Vehicle.__proto__));
+console.log("13 " + (t.isPrototypeOf(Truck.prototype)));
+console.log("14 " + (Truck.isPrototypeOf(t)));
+console.log("15 " + (Truck.prototype.isPrototypeOf(t)));
+console.log("16 " + (Object.getPrototypeOf(t) === Truck.prototype));
+console.log("17 " + (Object.getPrototypeOf(t) === t.__proto__));
+console.log("18 " + (Object.getPrototypeOf(t) === Truck));
+console.log("19 " + (Vehicle.prototype.isPrototypeOf(t)));
+console.log("20 " + (typeof t === "Truck"));
+
+-->
+
 <div class="container">
     <header id="site-header">
         <h1>My Online Nook</h1>
         <h2>I'm writing as a thinking aid, but you're welcome to read. Excuse the lack of polish.</h2>
     </header>
+
+    <article class="post">
+        <header class="post-header">
+            <h3 class="post-title">True or False -- a Javascript Quiz!</h3>
+            <span class="post-date">28 July 2016</span>
+        </header>
+        <pre>
+            var Vehicle = function(){};
+            var Truck = function(){};
+            Truck.prototype = Object.create(Vehicle.prototype);
+            var t = new Truck();
+
+            console.log("1  " + (t instanceof Vehicle));
+            console.log("2  " + (t instanceof Truck));
+            console.log("3  " + (t.prototype instanceof Truck));
+            console.log("4  " + (t.prototype === Truck.prototype));
+            console.log("5  " + (t.prototype === Truck));
+            console.log("6  " + (t.__proto__ === Truck));
+            console.log("7  " + (t.__proto__ === Truck.prototype));
+            console.log("8  " + (Truck.__proto__ === Vehicle.prototype));
+            console.log("9  " + (Truck.__proto__.__proto__ === Object.prototype));
+            console.log("10 " + (t.__proto__.__proto__ === Object.prototype));
+            console.log("11 " + (t.__proto__.__proto__.__proto__ === Object.prototype));
+            console.log("12 " + (Truck.__proto__ === Vehicle.__proto__));
+            console.log("13 " + (t.isPrototypeOf(Truck.prototype)));
+            console.log("14 " + (Truck.isPrototypeOf(t)));
+            console.log("15 " + (Truck.prototype.isPrototypeOf(t)));
+            console.log("16 " + (Object.getPrototypeOf(t) === Truck.prototype));
+            console.log("17 " + (Object.getPrototypeOf(t) === t.__proto__));
+            console.log("18 " + (Object.getPrototypeOf(t) === Truck));
+            console.log("19 " + (Vehicle.prototype.isPrototypeOf(t)));
+            console.log("20 " + (typeof t === "Truck"));
+        </pre>
+    </article>
 
     <article class="post">
         <header class="post-header">
@@ -177,7 +247,7 @@
     <article class="post">
         <header class="post-header">
             <h3 class="post-title">Programming Books</h3>
-            <span class="post-date">15 April 2016</span>
+            <span class="post-date">15 April 2016 (updated 28 July 2016)</span>
         </header>
         <h4>YMMV / Humility Disclaimer:</h4>
         <p>Here are some programming-related ranked and rated by how useful I felt they were to me personally. The most
@@ -203,26 +273,34 @@
         <p>Mostly the book has aged well, but HTTP/2 will make some of it obsolete.</p>
 
         <h4>Java Concurrency in Practice - Brian Goetz - 8</h4>
-        <p>I've only read half so far, but I found this improved both my general understanding of concurrency with OO
-            design as well as Java specifics. Could be denser in parts.</p>
-        <p>Today I noticed the author has a <a href="https://stackoverflow.com/users/3553087/brian-goetz">Stack Overflow
-            account</a>! I should read his answers. </p>
+        <p>I have just finished re-reading this book. It's a classic for a reason. The book's coverage of Java is only
+            up to date for Java 6, but fortunately the author has many more current answers to questions on his <a
+                    href="https://stackoverflow.com/users/3553087/brian-goetz">Stack Overflow account</a>! </p>
         <p>Edit: <a
-                href="https://stackoverflow.com/questions/10202768/is-java-concurrency-in-practice-still-valid/10214606#10214606">Brian
-            Goetz answering "Java Concurrency in Practice still valid?"</a>:</p>
-        <blockquote>While my perspective may be biased, my current intention for updating the book would be almost
+                href="https://stackoverflow.com/questions/10202768/is-java-concurrency-in-practice-still-valid/10214606#10214606">
+            Brian Goetz answering "Java Concurrency in Practice still valid?"</a>:</p>
+        <blockquote>"While my perspective may be biased, my current intention for updating the book would be almost
             strictly additive, covering fork-join, parallel decomposition, and the new parallel bulk data operations
-            coming in Java SE 8.
+            coming in Java SE 8."
         </blockquote>
 
-        <h4>The Soul of a New Machine - Tracy Kidder - 7.5</h4>
+        <h4>The Soul of a New Machine - Tracy Kidder - 8</h4>
         <p>This book is a non-fiction account of the development of a new computer in the 1970s, focusing on the
             experiences of the engineers involved. Apart from being thoroughly enjoyable, I think this book is useful to
             programmers because it explores many emotional issues a programmer must face. Building a system can easily
             become addictive and all-consuming. It's hard to resist pouring your entire self into a project, so it's
             worth considering what is gained and lost by doing so.</p>
 
-        <h4>Patterns of Enterprise Architecture 7</h4>
+        <h4><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know Javascript</a> - Kyle Simpson - 7.5</h4>
+        <p>This unusual book/series is available for free on GitHub. It was helpful both towards getting a deeper
+            technical understanding of Javascript (eg, how promises create micro-tasks that execute before the next task
+            on the event loop), and for gaining an understanding for the strengths and purpose of various features (eg,
+            how Promises are useful for writing async code that can be read serially).</p>
+        <p>My only complaint is that too much time to is dedicated to defending or critiquing the language, or
+            proposing how he believes future features should be implemented. But of course that's his prerogative, and I
+            can't ask exactly ask for a refund.</p>
+
+        <h4>Patterns of Enterprise Architecture - Martin Fowler - 7</h4>
         <p>A well structured book with lots of useful information. It's intended as reference and to provide an overview
             of what patterns are widely used, rather than to promote any single approach. Nevertheless, Martin's
             preferences (eg, Domain Models) are made very clear. I wish he wrote another book dedicated just to his way
@@ -234,11 +312,7 @@
             wonderful collection of different ways people think.</p>
 
         <h4>Javascript Patterns - Stoyan Stefanov - 7</h4>
-        <p>Need to revisit this book.</p>
-
-        <h4>Javascript: The Good Parts - Douglas Crockford - 7</h4>
-        <p>I like the central idea behind the book: Javascript has hairy bits to avoid and strengths to embrace. I need
-            to revisit this book.</p>
+        <p>A useful crash-course of a number of Javascript practices. Could be a bit more up to date.</p>
 
         <h4>Thinking in Systems - Donella Meadows - 6.5</h4>
         <p>This book was an enjoyable read, but I haven't found myself applying its way of modeling systems anywhere.
@@ -251,20 +325,44 @@
         <p>The book's confrontational tone, set by constantly asserting "<i>professionals use ___</i>", didn't gel with
             me because I believe friendlier ways to foster improvement are more productive.</p>
 
-        <h4>Zen and the Art of Motorcycle Maintenance - Robert Pirsig - 6.5</h4>
+        <h4>Zen and the Art of Motorcycle Maintenance - Robert Pirsig - 6</h4>
         <p>This book caught my attention because it was the only work of fiction on a list of top 100 books for
             programmers. The book is a number of things: the author's philosophy, a story about riding motorbikes across
             America, and the author's reflections on himself as a young man. I enjoyed it as a novel but the philosophy
             became too metaphysical for me half way through so I stopped reading.</p>
 
+        <h4>Javascript: The Good Parts - Douglas Crockford - 6</h4>
+        <p>I like the central idea behind the book: Javascript has hairy bits to avoid and strengths to embrace. Perhaps
+            this book was great at the time it was published, but many of the technical facts and the practices it
+            espouses are now out of date.</p>
+
+        <h4>Scala programming: Learning Scala fast! - Ralph Archer - NaN</h4>
+        <p>This is one of the stranger technical books I've read. It seems like it was written in one sitting, and is
+            published in giant font on unnumbered pages. I love how mercilessly short it is, given the objective of the
+            book, but it would be so much better with some re-phrasing and if the code examples were indented!</p>
+
+        <h4>Non-Tech Related</h4>
+
+        <h4>A Very Short History of the World - Geoffrey Blainey - 8</h4>
+        <p>Recently I've been making an effort to gain a better sense of a timeline of human history. This book helped
+            tremendously. Although the scope of the book makes covering anything in depth impossible, it gives you
+            enough of a taste of many topics to spur you on to doing additional reading. I particularly enjoyed learning
+            about the history of telegraphy, and was astonished by how quickly it was adopted.</p>
+
         <h4>Next Reads / Tsundoku</h4>
         <ul>
+            <li>Introduction to Algorithms</li>
             <li>Refactoring to Patterns</li>
             <li>The Computational Beauty of Nature</li>
-            <li>The Soul of a New Machine</li>
             <li>Growing Object-Oriented Software, Guided by Tests</li>
             <li>Thinking, Fast and Slow</li>
-            <li>A Very Short History of the World</li>
+            <li>High Performance Browser Networking</li>
+            <li>Poor Richard's Almanack</li>
+            <li>Poor Charlie's Almanack</li>
+            <li>The Essential Drucker</li>
+            <li>Gun's, Germs, and Steel</li>
+            <li>Coders at Work</li>
+            <li>Birth of the Chaordic Age</li>
         </ul>
     </article>
     <article class="post">
